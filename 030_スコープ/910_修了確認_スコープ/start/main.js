@@ -9,8 +9,8 @@
 function fn() {
     if(true) {
         let a = 'fn called';
+        return a; // ReferenceError: a is not defined
     }
-    return a; // ReferenceError: a is not defined
 }
 
 const result = fn();
@@ -26,7 +26,7 @@ function fn2() {
     console.log(val); // 期待値->'val1'
 
     if(true) {
-        var val = 'val2';
+        let val = 'val2';
         console.log(val); // 期待値->'val2'
     }
 
@@ -45,4 +45,30 @@ fn2();
  * increment(); // 期待値->3
  * increment(); // 期待値->4
  */
+
+// function incremetnFactory(num) {
+
+//     function increment(value) {
+//       let sum =  num + value;
+//         console.log(sum)
+//     }
+//     return increment;
+// }
+
+// const a = incremetnFactory(1)
+
+// a(10);
+
+{      
+    let num = 0;
+    function increment() {
+        num = num + 1;
+        console.log(num);
+    }
+}
+
+increment();
+increment();
+increment();
+increment();
 
