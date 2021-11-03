@@ -5,3 +5,5 @@ function F(a, b) {
 }
 
 F.prototype.c = function() {}
+
+const instance = new F(1,3);
