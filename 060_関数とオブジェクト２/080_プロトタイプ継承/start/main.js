@@ -6,3 +6,6 @@ function Person(name, age) {
 Person.prototype.hello = function() {
   console.log('hello ' + this.name);
 }
+
+const bob = new Person('Bob', 18);
+bob.hello();
