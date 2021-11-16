@@ -5,19 +5,23 @@ class Person {
 	}
 
 	hello(person) {
-		console.log(`${this.name} says hello ${person.name}`);
+		console.log(`${this.name} says hello to ${person.name}`);
+		return this;
 	}
 
 	introduce() {
 		console.log(`Hi, I'm ${this.name}, ${this.age} years old.`);
+		return this;
 	}
 
 	shakeHands(person) {
 		console.log(`${this.name} shake hands with ${person.name}.`);
+		return this;
 	}
 
 	bye(person) {
 		console.log(`Goodbye, ${person.name}.`);
+		return this;
 	}
 }
 
