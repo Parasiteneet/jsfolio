@@ -24,6 +24,33 @@
  * 	.set(6) -> '42'を出力（10 - 3) * 6
  */
 
+class Calculator {
+	constructor() {
+		this.val = null;
+		this._operator; //プライベートプロパティ= このクラスの内部でのみ使用
+	} 
+	set(val) {
+		this.val = val;
+		if(this.val === null) {
+			this.val = val;
+		} else {
+			this._operator(this.val, val);
+		}
+		return this;
+	}
+	plus() {
+		this._operator = function(val1, val2) {
+			const result = val1 + val2;
+			this._equal(reslut);
+		}
+		return this;
+	}
+
+	_equal(result) {
+		this.val = result;
+		console.log(reslut);
+	}
+}
 const calc = new Calculator();
 
 calc.set(10)
